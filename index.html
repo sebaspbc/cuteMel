@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra canción de amor, cute Estefa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="image.png">
+</head>
+
+<body>
+    <button class="scene" onclick="showLoveMessage()">
+        <span class="text">Presiona aquí</span>
+    </button>
+
+    <!-- Cuadrado que muestra el mensaje de amor, que ahora es un botón -->
+    <a id="loveMessage" class="love-message" href="javascript:void(0);" onclick="showHeart()">
+        Te amo, Estefa.
+    </a>
+
+    <!-- Enlace que contiene el corazón -->
+    <a id="heartLink" href="https://open.spotify.com/intl-es/track/1s3WD4gbNoEXHiuSTmAKaK?si=ccf753cc02b64af4"
+        target="_blank" class="heart-container">
+        <div class="heart"></div>      
+    </a>
+
+    <script>
+        function showLoveMessage() {
+            // Muestra el botón con el mensaje de amor
+            document.getElementById('loveMessage').style.visibility = 'visible';
+        }
+
+        function showHeart() {
+            // Oculta todo menos el corazón
+            document.querySelector('.scene').style.display = 'none';
+            document.getElementById('loveMessage').style.display = 'none';
+            document.getElementById('heartLink').style.visibility = 'visible';
+        }
+    </script>
+</body>
+
+</html>
